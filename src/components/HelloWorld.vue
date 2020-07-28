@@ -1,60 +1,88 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container-fliud">
+    <Navbar/>
+    <div class="jumbotron text-center">
+      <img src="../assets/undraw_order_confirmed_aaw7.png" width="400" height="300" alt="" srcset="">
+      <h1>Chichi World</h1>
+      <p>Order any food of your choice from any place in the world just with click at the <br> comfort of home or anywhere you are</p>
+      <router-link to="/signup" class="btn btn-primary ">TRY IT FOR FREE</router-link>
+      <a href="" class="btn btn-primary">HOW IT WORKS</a>
+    </div>
+    <div class="container">
+      <div class="row">
+       <div class="col-md-6">
+         <h3>ARE YOU LOST</h3>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi commodi ad quod fugiat saepe adipisci 
+           rerum non excepturi earum enim nobis eaque atque esse repellat nemo magni consequuntur, tenetur sed!</p>
+       </div>
+        <div class="col-md-6">
+          <img src="../assets/undraw_online_groceries_a02y.png" width="600" height="400" class="img" alt="">
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-md-6">
+         <img src="../assets/undraw_mail1_uab6.png" width="600" height="400" class="img" alt="">
+       </div>
+        <div class="col-md-6">
+         
+        </div>
+      </div>
+    </div>
+    <div class="content">
+        <h1>What is Chichi</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rem illo deleniti libero corrupti, eveniet ipsa temporibus. Harum, voluptatem <br> temporibus a quaerat quae laboriosam labore omnis consectetur? Sequi, temporibus quae?</p>
+        <button class="btn btn-danger" id="startherebtn">START HERE</button>
+    </div>
+    <bottom/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+  import Navbar from '../components/Navbar'
+  import bottom from '../components/bottom'
+  export default {
+    name: 'HelloWorld',
+    components:{
+      Navbar,
+      bottom
+    },    
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+    data: () => ({
+     
+    }),
+  }
+</script>
+<style  lang="scss" scoped>
+.jumbotron{
+  padding: 20px;
+  background-color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+ .btn{
+   color: white;
+   margin: 10px;
+   padding: 10px;
+   border: none;
+   box-shadow: none;
+   border-radius: 0px;
+   width: 200px;
+   background-color: #6c63ff;
+ }
+ .content{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   padding: 100px;
+   background-color: #0072bc;
+   text-align: center;
+   color: #fff;
+ }
+ #startherebtn{
+   background-color: #fff;
+   color: #000;
+ }
+ .details{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
 </style>
